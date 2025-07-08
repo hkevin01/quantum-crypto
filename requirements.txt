@@ -2,3 +2,6 @@ qiskit
 numpy
 matplotlib
 PyQt5 
+qiskit-aer 
+qiskit-algorithms 
+qiskit-primitives 

@@ -1,6 +1,6 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from qiskit import Aer
+import numpy as np
+from qiskit_aer import Aer
 
 # Explanation string
 EXPLANATION = (
@@ -10,11 +10,11 @@ EXPLANATION = (
 )
 
 def run_shor_demo(N=15):
-    from qiskit.algorithms import Shor
-    from qiskit.utils import QuantumInstance
+    from qiskit_algorithms import Shor
+    from qiskit_primitives import BackendSampler
     backend = Aer.get_backend('aer_simulator')
-    quantum_instance = QuantumInstance(backend, shots=1024)
-    shor = Shor(quantum_instance=quantum_instance)
+    sampler = BackendSampler(backend)
+    shor = Shor(sampler=sampler)
     result = shor.factor(N=N)
     return result.factors[0] if result.factors else None
 

@@ -1,12 +1,26 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QWidget, QVBoxLayout, QLabel, QPushButton, QLineEdit, QHBoxLayout, QMessageBox
-from src import shor_demo, ecdsa_discrete_log, post_quantum_crypto
+
+from PyQt5.QtWidgets import (
+    QApplication,
+    QHBoxLayout,
+    QLabel,
+    QLineEdit,
+    QMainWindow,
+    QMessageBox,
+    QPushButton,
+    QTabWidget,
+    QVBoxLayout,
+    QWidget,
+)
+
+from src import ecdsa_discrete_log, post_quantum_crypto, shor_demo
+
 
 class QuantumCryptoApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Quantum Crypto Cryptography')
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 100, 700, 600)  # Reduced width from 800 to 700
         self.initUI()
 
     def initUI(self):

@@ -79,3 +79,8 @@ scripts/__pycache__/
 
 # Settings
 settings.json 
+# Python virtual environments
+.venv/
+
+# Log files
+*.log 
