@@ -1,0 +1,9 @@
+# Copilot configuration
+# See https://docs.github.com/en/copilot for more options
+
+[general]
+# Enable Copilot for this project
+enabled = true
+
+# Exclude certain files or directories
+exclude = ["docs/", "scripts/"] 
